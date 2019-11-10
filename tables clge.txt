@@ -1,0 +1,22 @@
+create table Department30(
+Dept_id number(20) primary key,
+Dept_name varchar2(20),
+Dept_location varchar2(20));
+
+create table Instructor30(
+Inst_id number(20) primary key,
+Inst_name varchar2(20),
+Inst_phone number(20),
+Inst_room number(20),
+Dept_id number(20),
+constraint in_fk1 foreign key(Dept_id) references Department30(Dept_id ));
+
+CREATE SEQUENCE inst_seq20
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1;
+
+CREATE SEQUENCE dept_seq20
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1;
